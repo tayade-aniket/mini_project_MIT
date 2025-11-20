@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Mr. Aniket Tayade.">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <title>MIT ACSC | Tip Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="min-vh-100 d-flex align-items-center justify-content-center">
+      <div class="tip-card p-4 shadow-sm rounded-4 w-100">
+        <div class="title text-center mb-3">
+          <i class="fa-solid fa-calculator fa-lg"></i>
+          <h2 class="d-inline-block ms-2">Tip Calculator</h2>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Bill Amount</label>
+          <input
+            type="number"
+            id="bill"
+            class="form-control"
+            placeholder="Enter bill amount"
+          />
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Tip Percentage</label>
+          <select id="tipPercent" class="form-select">
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="15">15%</option>
+            <option value="20">20%</option>
+            <option value="25">25%</option>
+          </select>
+        </div>
+        <button class="btn w-100 btn-calc mb-3" onclick="calculateTip()">
+          Calculate
+        </button>
+        <div class="output text-center">
+          <p class="m-1">Tip: <strong id="tipAmount">₹0</strong></p>
+          <p class="m-1">Total: <strong id="totalAmount">₹0</strong></p>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
